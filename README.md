@@ -1,0 +1,1 @@
+Aplikasi web untuk memonitor hasil survey kepuasan pengunjung di kebun binatang PDTSKBS. Aplikasi ini menampilkan dashboard dengan grafik jumlah penilaian (Sad/Happy) dan tabel data survey dengan fitur pencarian, pagination, serta ekspor ke CSV. Dibuat menggunakan PHP, Bootstrap 5, dan MySQL, dijalankan pada XAMPP.
