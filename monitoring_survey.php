@@ -70,9 +70,10 @@ $result = mysqli_stmt_get_result($stmt);
         </div>
         <div class="table-responsive">
             <table class="table table-striped table-bordered">
-                <thead>
+                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>Nomor</th>
+                       
                         <th>Nama Petugas</th>
                         <th>Lokasi</th>
                         <th>Penilaian</th>
@@ -81,14 +82,17 @@ $result = mysqli_stmt_get_result($stmt);
                 </thead>
                 <tbody>
                     <?php if (mysqli_num_rows($result) > 0): ?>
+                        <?php $row_number = 1; ?>
                         <?php while ($row = mysqli_fetch_assoc($result)): ?>
                             <tr>
-                                <td><?php echo htmlspecialchars($row['id']); ?></td>
+                                <td><?php echo $row_number; ?></td>
+                                
                                 <td><?php echo htmlspecialchars($row['officer_name']); ?></td>
                                 <td><?php echo htmlspecialchars($row['location']); ?></td>
                                 <td><?php echo htmlspecialchars($row['rating']); ?></td>
                                 <td><?php echo htmlspecialchars($row['formatted_date']); ?></td>
                             </tr>
+                            <?php $row_number++; ?>
                         <?php endwhile; ?>
                     <?php else: ?>
                         <tr>
